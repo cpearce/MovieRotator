@@ -93,9 +93,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="AudioProcessor.h" />
     <ClInclude Include="ClickableRegion.h" />
     <ClInclude Include="cubeb\cubeb-internal.h" />
