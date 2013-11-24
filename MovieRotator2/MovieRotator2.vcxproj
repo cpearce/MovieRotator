@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A6B2C364-82BF-4069-87A3-4BCB7D1A1B36}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MovieRotator2</RootNamespace>
+    <ProjectName />
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;$(EXTRA_PREPROCESSOR_DEFINES);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)\SoftActivate\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>mfplat.lib;Mfreadwrite.lib;Propsys.lib;d3d9.lib;dxva2.lib;mf.lib;d2d1.lib;dwrite.lib;delayimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>mfplat.dll;Mfreadwrite.dll;Propsys.dll;d3d9.dll;dxva2.dll;mf.dll;d2d1.dll;dwrite.dll</DelayLoadDLLs>
+      <AdditionalLibraryDirectories>$(SolutionDir)\SoftActivate\lib\Win32\Debug</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;$(EXTRA_PREPROCESSOR_DEFINES);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)\SoftActivate\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>mfplat.lib;Mfreadwrite.lib;Propsys.lib;d3d9.lib;dxva2.lib;mf.lib;d2d1.lib;dwrite.lib;delayimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>mfplat.dll;Mfreadwrite.dll;Propsys.dll;d3d9.dll;dxva2.dll;mf.dll;d2d1.dll;dwrite.dll</DelayLoadDLLs>
+      <AdditionalLibraryDirectories>$(SolutionDir)\SoftActivate\lib\Win32\Static Release MT\vs2012</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AudioProcessor.h" />
+    <ClInclude Include="ClickableRegion.h" />
+    <ClInclude Include="cubeb\cubeb-internal.h" />
+    <ClInclude Include="cubeb\cubeb.h" />
+    <ClInclude Include="D2DManager.h" />
+    <ClInclude Include="FrameRotator.h" />
+    <ClInclude Include="H264ClassFactory.h" />
+    <ClInclude Include="Interfaces.h" />
+    <ClInclude Include="JobListPane.h" />
+    <ClInclude Include="JobListScrollBar.h" />
+    <ClInclude Include="MovieRotator2.h" />
+    <ClInclude Include="EventListeners.h" />
+    <ClInclude Include="PlaybackClocks.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RotationTranscoder.h" />
+    <ClInclude Include="TranscodeJobRunner.h" />
+    <ClInclude Include="RoundButton.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TranscodeJobList.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="VideoDecoder.h" />
+    <ClInclude Include="VideoPainter.h" />
+    <ClInclude Include="VideoPlayer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AudioProcessor.cpp" />
+    <ClCompile Include="ClickableRegion.cpp" />
+    <ClCompile Include="cubeb\cubeb.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="cubeb\cubeb_winmm.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="D2DManager.cpp" />
+    <ClCompile Include="FrameRotator.cpp" />
+    <ClCompile Include="H264ClassFactory.cpp" />
+    <ClCompile Include="JobListPane.cpp" />
+    <ClCompile Include="JobListScrollBar.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MovieRotator2.cpp" />
+    <ClCompile Include="EventListeners.cpp" />
+    <ClCompile Include="PlaybackClocks.cpp" />
+    <ClCompile Include="RotationTranscoder.cpp" />
+    <ClCompile Include="TranscodeJobRunner.cpp" />
+    <ClCompile Include="RoundButton.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TranscodeJobList.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="VideoDecoder.cpp" />
+    <ClCompile Include="VideoPainter.cpp" />
+    <ClCompile Include="VideoPlayer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MovieRotator2.rc">
+      <AdditionalOptions Condition="'$(EXTRA_PREPROCESSOR_DEFINES)'!=''">/D $(EXTRA_PREPROCESSOR_DEFINES) %(AdditionalOptions)</AdditionalOptions>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\icon\movierotator-simple.ico" />
+    <Image Include="Resources\arrow_down_48.png" />
+    <Image Include="Resources\arrow_up_48.png" />
+    <Image Include="Resources\delete_48.png" />
+    <Image Include="Resources\open.png" />
+    <Image Include="Resources\pause.png" />
+    <Image Include="Resources\play.png" />
+    <Image Include="Resources\rotate-acw.png" />
+    <Image Include="Resources\rotate-cw.png" />
+    <Image Include="Resources\save.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

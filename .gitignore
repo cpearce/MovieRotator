@@ -1,0 +1,11 @@
+Debug/
+Release/
+ipch/
+Thumbs.db
+*.vcxproj.filters
+*.vcxproj.user
+*.vcxproj.aps
+MovieRotator2.opensdf
+MovieRotator2.sdf
+MovieRotator2.v11.suo
+MovieRotator2.aps
